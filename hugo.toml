@@ -1,3 +1,32 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://votre-site.com'
+languageCode = 'fr-FR'
+title = 'Votre Société - Conseil en Stratégie & Finance'
+theme = 'minimal-consultant'
+
+[params]
+company_name = 'Votre Société'
+logo_text = 'S'
+description = 'Nous accompagnons les dirigeants dans leurs décisions les plus critiques avec une approche rigoureuse et des méthodes éprouvées.'
+email = 'contact@votre-societe.com'
+linkedin = 'https://linkedin.com/in/votre-profil'
+
+[params.hero]
+title = 'Conseil en stratégie & finance'
+subtitle = 'Nous accompagnons les dirigeants dans leurs décisions les plus critiques avec une approche rigoureuse et des méthodes éprouvées.'
+cta_text = 'Parlons de votre défi'
+cta_link = '#contact'
+
+[[menu.main]]
+name = 'Notre approche'
+url = '#approche'
+weight = 10
+
+[[menu.main]]
+name = 'Expertises'
+url = '#expertises'
+weight = 20
+
+[[menu.main]]
+name = 'Contact'
+url = '#contact'
+weight = 30

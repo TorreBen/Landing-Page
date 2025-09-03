@@ -1,0 +1,67 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>{{ .Site.Params.hero.title }}</h1>
+            <p class="subtitle">{{ .Site.Params.hero.subtitle }}</p>
+            <a href="{{ .Site.Params.hero.cta_link }}" class="cta-link">{{ .Site.Params.hero.cta_text }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Approach Section -->
+<section id="approche" class="approach">
+    <div class="container">
+        <h2 class="section-title">{{ .Params.approach.title }}</h2>
+        <div class="methodology-date">{{ .Params.approach.date }}</div>
+        <div class="approach-content">
+            <div class="approach-text">
+                {{ .Params.approach.content | markdownify }}
+            </div>
+            <div class="pull-quote">
+                "{{ .Params.approach.quote }}"
+            </div>
+            <div class="author-line">— {{ .Params.approach.author }}</div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="expertises" class="services">
+    <div class="container">
+        <h2 class="section-title">{{ .Params.services.title }}</h2>
+        <div class="services-grid">
+            {{ range .Params.services.items }}
+            <div class="service-item">
+                <div class="service-meta">{{ .meta }}</div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .description }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-content">
+            <h2 class="section-title">{{ .Params.contact.title }}</h2>
+            <div class="contact-signature">
+                <p>{{ .Params.contact.message }}</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+                </div>
+                <div class="contact-item">
+                    <h4>LinkedIn</h4>
+                    <a href="{{ .Site.Params.linkedin }}" target="_blank">Votre profil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

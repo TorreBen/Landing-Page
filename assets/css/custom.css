@@ -1,0 +1,13 @@
+/* Flexoki font */
+@import url('https://fonts.googleapis.com/css2?family=Flexoki&display=swap');
+
+body {
+    font-family: 'Flexoki', sans-serif;
+    background-color: #f5f5dc; /* fond crème */
+    color: #333; /* texte sombre */
+}
+
+/* Ajustements supplémentaires si besoin */
+a {
+    color: #5a4d41; /* couleur liens */
+}
