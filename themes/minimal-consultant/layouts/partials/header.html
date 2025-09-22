@@ -1,13 +1,17 @@
 <header>
     <nav class="container">
         <div class="logo-container">
-            <div class="logo">{{ .Site.Params.logo_text }}</div>
-            <div class="company-name">{{ .Site.Params.company_name }}</div>
+            <img src="/images/logo-sterna.png" alt="Sterna Conseil" class="logo-image" />
         </div>
         <ul class="nav-links">
             {{ range .Site.Menus.main }}
             <li><a href="{{ .URL }}">{{ .Name }}</a></li>
             {{ end }}
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <div class="toggle-track">
+                    <div class="toggle-thumb"></div>
+                </div>
+            </button>
         </ul>
     </nav>
 </header>

@@ -1,32 +1,44 @@
-baseURL = 'https://votre-site.com'
+baseURL = 'https://sterna-conseil.com'
 languageCode = 'fr-FR'
-title = 'Votre Société - Conseil en Stratégie & Finance'
+title = 'Sterna Conseil'
 theme = 'minimal-consultant'
 
 [params]
-company_name = 'Votre Société'
-logo_text = 'S'
-description = 'Nous accompagnons les dirigeants dans leurs décisions les plus critiques avec une approche rigoureuse et des méthodes éprouvées.'
-email = 'contact@votre-societe.com'
-linkedin = 'https://linkedin.com/in/votre-profil'
+# Identité
+company_name = 'Sterna Conseil'
+description = 'Conseil stratégique et modélisation financière dynamique pour levées de fonds et opérations M&A'
 
-[params.hero]
-title = 'Conseil en stratégie & finance'
-subtitle = 'Nous accompagnons les dirigeants dans leurs décisions les plus critiques avec une approche rigoureuse et des méthodes éprouvées.'
-cta_text = 'Parlons de votre défi'
-cta_link = '#contact'
+# Contact
+email = 'benoit@sterna-conseil.com'
+linkedin = 'https://www.linkedin.com/in/benoitgrillaudinsead/'
+morgen = 'https://morgen.so/benoit-sterna-conseil'
+
+# Favicon
+favicon = '/images/Favicon.ico'
+logo = '/images/logo-sterna.png'
+
+# Menu navigation
+[[menu.main]]
+name = 'Accueil'
+url = '/'
+weight = 5
 
 [[menu.main]]
-name = 'Notre approche'
-url = '#approche'
+name = 'Avantages'
+url = '#avantages'
 weight = 10
 
 [[menu.main]]
-name = 'Expertises'
-url = '#expertises'
+name = 'Services'
+url = '#services'
+weight = 15
+
+[[menu.main]]
+name = 'Équipe'
+url = '#equipe'
 weight = 20
 
 [[menu.main]]
 name = 'Contact'
 url = '#contact'
-weight = 30
+weight = 25
