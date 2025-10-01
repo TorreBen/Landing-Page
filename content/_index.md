@@ -70,30 +70,31 @@ method:
   title: "Ce qui nous différencie"
   pillars:
     - title: "Pluridisciplinarité"
-      description: "Nous combinons trois métiers habituellement séparés :
+      description: "Nous combinons <strong>trois métiers</strong> habituellement séparés :
 
 • Conseil stratégique
 • Modélisation financière  
 • Accompagnement transactionnel
 
-Cette intégration produit une cohérence que les interventions séparées ne peuvent atteindre."
+Cette intégration produit une <strong>cohérence</strong> que les interventions séparées ne peuvent atteindre."
+
       visual: "visuel6.png"
     - title: "Modélisation stratégique"
-      description: "Nous utilisons la modélisation comme outil de définition stratégique et de communication.
+      description: "Nous utilisons la modélisation comme outil de <strong>définition stratégique et de communication</strong>.<br>
 
-Nos modèles dynamiques structurent votre réflexion et deviennent vos supports de conviction auprès des investisseurs professionnels."
+Nos modèles dynamiques structurent votre réflexion et deviennent vos <strong>supports de conviction</strong> auprès des investisseurs professionnels."
       visual: "visuel7.png"
     - title: "Expérience engagée"
-      description: "Nous mobilisons exclusivement des profils seniors, habitués aux enjeux de direction générale.
+      description: "Nous mobilisons exclusivement des <strong>profils seniors</strong>, habitués aux enjeux de direction générale.<br>
 
-Ces experts réalisent personnellement les missions - sans délégation - et demeurent impliqués tout au long de la mission."
+Ces experts réalisent personnellement les missions - sans délégation - et demeurent <strong>impliqués tout au long de la mission</strong>."
       visual: "visuel8.png"
     - title: "Durabilité"
-      description: "Nous construisons pour le deal ET pour l'après-deal.
+      description: "Nous construisons pour le deal <strong>ET</strong> pour l'après-deal.<br>
 
-Nous accordons une place essentielle à l'intégration des acquisitions et vous aidons à l'anticiper.
+Nous accordons une place essentielle à l'<strong>intégration des acquisitions</strong> et vous aidons à l'anticiper.<br>
 
-Nous vous transmettons des outils ouverts et à votre marque (modèles et supports) qui garantissent votre autonomie opérationnelle."
+Nous vous transmettons des <strong>outils ouverts et à votre marque</strong> (modèles et supports) qui garantissent votre <strong>autonomie</strong> opérationnelle."
       visual: "visuel12.png"
 
 clients:
@@ -128,7 +129,7 @@ team:
   title: "Notre équipe"
   origin:
     title: "Origine"
-    description: "Sterna Conseil est née de l'expérience de Benoît Grillaud en conseil M&A, Private Equity et direction Stratégie de PME. Plus de 100 dossiers d'investissement et modèles financiers analysés et construits des deux côtés de la table."
+    description: "Sterna Conseil est née de l'expérience de Benoît Grillaud en conseil M&A, Private Equity et direction Stratégie de PME. 20+ années de pratique des deux côtés de la table, 100+ dossiers analysés et construits, 500m€+ de transactions accompagnées jusqu'au closing."
   collective:
     title: "Expertise collective"
     description: "Selon les missions, nous mobilisons des spécialistes confirmés : anciens dirigeants, ex-investisseurs, experts sectoriels et spécialistes M&A. Cette approche nous permet d'adapter précisément l'équipe à vos enjeux spécifiques."
