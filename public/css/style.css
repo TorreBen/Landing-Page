@@ -912,24 +912,20 @@ nav {
 
 
 .pillar-content p {
-
     font-size: 1.25rem;
-
     line-height: 1.7;
-
     color: var(--text-light);
-
     margin-bottom: 4rem;
-
     white-space: pre-line;
-
     text-align: left;
-
 }
 
-.pillar-content p br {
-    display: block;
-    margin-bottom: -0.9rem;
+/* Desktop uniquement */
+@media (min-width: 769px) {
+    .pillar-content p br {
+        display: block;
+        margin-bottom: -0.5rem;
+    }
 }
 
 .pillar-visual {
