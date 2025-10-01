@@ -1463,4 +1463,13 @@ footer p {
         justify-content: center;
         margin-bottom: 1rem;
     }
+
+    /* Section Différences - Fix mobile */
+    .pillar-content p {
+        font-size: 1.1rem;
+    }
+    
+    .pillar-content p br {
+        display: none;
+    }
 }
