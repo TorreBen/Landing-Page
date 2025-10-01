@@ -1473,3 +1473,9 @@ footer p {
         display: none;
     }
 }
+/* ... tes autres règles ... */
+    
+    .pillar-content ul li {
+        font-size: 1.1rem;
+    }
+}
