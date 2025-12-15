@@ -920,13 +920,6 @@ nav {
     text-align: left;
 }
 
-/* Desktop uniquement */
-@media (min-width: 769px) {
-    .pillar-content p br {
-        display: block;
-        margin-bottom: -0.5rem;
-    }
-}
 
 .pillar-visual {
 

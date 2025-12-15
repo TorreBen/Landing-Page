@@ -920,13 +920,6 @@ nav {
     text-align: left;
 }
 
-/* Desktop uniquement */
-@media (min-width: 769px) {
-    .pillar-content p br {
-        display: block;
-        margin-bottom: -0.5rem;
-    }
-}
 
 .pillar-visual {
 
@@ -1462,5 +1455,20 @@ footer p {
     .service-tags {
         justify-content: center;
         margin-bottom: 1rem;
+    }
+
+    /* Section Différences - Fix mobile */
+    .pillar-content p {
+        font-size: 1.1rem;
+    }
+    
+    .pillar-content p br {
+        display: none;
+    }
+}
+/* ... tes autres règles ... */
+    
+    .pillar-content ul li {
+        font-size: 1.1rem;
     }
 }
