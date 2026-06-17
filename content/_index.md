@@ -125,6 +125,22 @@ Nous vous accompagnons dans **trois contextes** spécifiques avec une offre de <
   mindset: "Vous construisez dans une logique de pérennité et souhaitez développer vos capacités de pilotage stratégique et financier."
   vision: "Vous cherchez à concilier enjeux immédiats et vision long terme, rentabilité et durabilité."
 
+testimonials:
+  title: "Ce qu'en disent nos clients"
+  items:
+    - quote: "Sterna est intervenu pour la brasserie pour notre première levée de fonds. Leur capacité d'analyse et leur vision stratégique nous ont fait grandir et <strong>le succès de la levée de fonds aujourd'hui est véritablement lié à leur travail.</strong> On s'en sert d'ailleurs encore tous les jours."
+      name: "La Dilettante"
+      context: "Agroalimentaire"
+      logo: "logo-dilettante.png"
+      category: "Levée de fonds"
+      services: ["Conseil", "Pack Investisseur", "Business Plan"]
+    - quote: "Sterna nous a accompagnés avec succès pendant près de 3 ans, avec notamment <strong>une opération M&A d'intégration verticale qui a été une grande réussite.</strong> Le travail effectué a été remarquable tant sur le plan technique que sur le plan relationnel."
+      name: "Celsius Energy"
+      context: "Transition Énergétique"
+      logo: "logo-celsius.png"
+      category: "Croissance externe"
+      services: ["Direction M&A externalisée", "Business Plan"]
+
 team:
   title: "Notre équipe"
   origin:

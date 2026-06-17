@@ -335,6 +335,34 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="temoignages" class="temoignages">
+        <div class="container">
+            <h2 class="section-title">{{ .Params.testimonials.title }}</h2>
+            <div class="temoignages-grid">
+                {{ range .Params.testimonials.items }}
+                <div class="temoignage-item">
+                    <blockquote><span class="quote-mark" aria-hidden="true">&ldquo;</span>{{ .quote | safeHTML }}</blockquote>
+                    <div class="temoignage-signature-row">
+                        {{ if .logo }}
+                        <img class="temoignage-logo" src="/images/{{ .logo }}" alt="{{ .name }}" />
+                        {{ end }}
+                        <p class="temoignage-signature"><span class="temoignage-nom">{{ .name }}</span><br>{{ .context }}</p>
+                    </div>
+                    <div class="temoignage-tags">
+                        <span class="temoignage-category">{{ .category }}</span>
+                        <div class="temoignage-tags-list">
+                            {{ range .services }}
+                            <span class="temoignage-tag">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+
     <!-- Team Section -->
     <section id="equipe" class="team">
         <div class="container">

@@ -16,6 +16,8 @@
 
     --quote-bg: rgba(0, 0, 255, 0.05);
 
+    --quote-mark: rgba(26, 26, 26, 0.18);
+
 }
 
 
@@ -37,6 +39,8 @@
     --border-light: rgba(255, 252, 240, 0.2);
 
     --quote-bg: rgba(0, 0, 255, 0.1);
+
+    --quote-mark: rgba(255, 252, 240, 0.25);
 
 }
 
@@ -1089,6 +1093,226 @@ nav {
 
 
 
+/* Testimonials */
+
+.temoignages {
+
+    padding: 8rem 0;
+
+    background: var(--bg-primary);
+
+    transition: background-color 0.3s ease;
+
+}
+
+
+
+.temoignages-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 1.5rem;
+
+    max-width: 1100px;
+
+    margin: 4rem auto 0;
+
+}
+
+
+
+.temoignage-item {
+
+    padding: 2rem;
+
+    border-left: 3px solid var(--accent);
+
+    background: var(--quote-bg);
+
+    transition: background-color 0.3s ease;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.temoignage-item blockquote {
+
+    font-size: 1.15rem;
+
+    line-height: 1.7;
+
+    color: var(--text-light);
+
+    font-style: italic;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+
+.quote-mark {
+
+    display: block;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-style: italic;
+
+    font-size: 4.5rem;
+
+    line-height: 0.5;
+
+    color: var(--quote-mark);
+
+    margin-bottom: 0.75rem;
+
+}
+
+
+
+.temoignage-signature-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+}
+
+
+
+.temoignage-logo {
+
+    height: 32px;
+
+    width: auto;
+
+    object-fit: contain;
+
+    opacity: 0.9;
+
+    flex-shrink: 0;
+
+}
+
+
+
+[data-theme="dark"] .temoignage-logo {
+
+    filter: invert(1);
+
+}
+
+
+
+.temoignage-item blockquote strong {
+
+    color: var(--text-primary);
+
+    font-weight: 600;
+
+}
+
+
+
+.temoignage-signature {
+
+    font-size: 0.9rem;
+
+    color: var(--text-secondary);
+
+    line-height: 1.5;
+
+}
+
+
+
+.temoignage-nom {
+
+    color: var(--text-primary);
+
+    font-weight: 700;
+
+}
+
+
+
+.temoignage-tags {
+
+    margin-top: auto;
+
+    padding-top: 1rem;
+
+    border-top: 1px solid var(--border-light);
+
+}
+
+
+
+.temoignage-category {
+
+    display: block;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    color: var(--text-secondary);
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+
+    margin-bottom: 0.75rem;
+
+}
+
+
+
+.temoignage-tags-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+}
+
+
+
+.temoignage-tag {
+
+    display: inline-block;
+
+    background: white;
+
+    color: var(--accent);
+
+    border: 1px solid var(--accent);
+
+    padding: 0.3rem 0.6rem;
+
+    border-radius: 12px;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+
+
 /* Team */
 
 .team-content {
@@ -1465,9 +1689,7 @@ footer p {
     .pillar-content p br {
         display: none;
     }
-}
-/* ... tes autres règles ... */
-    
+
     .pillar-content ul li {
         font-size: 1.1rem;
     }
