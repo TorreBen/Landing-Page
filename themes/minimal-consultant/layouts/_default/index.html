@@ -122,6 +122,120 @@
             margin-bottom: 0.5rem;
         }
         
+        /* Cas client : bandeau-pied + ouverture en lightbox (pilier Modélisation stratégique) */
+        .pillar-item.has-case {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            margin-bottom: 0;
+        }
+        .case-band {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            width: 100%;
+            margin: 0 0 3rem 0;
+            padding: 1rem 1.5rem;
+            border: 1.5px solid var(--accent);
+            border-radius: 0 0 8px 8px;
+            background: rgba(0, 0, 255, 0.06);
+            color: var(--accent);
+            font-family: inherit;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+        .case-band:hover,
+        .case-band:focus-visible {
+            background: rgba(0, 0, 255, 0.14);
+            color: var(--accent);
+            outline: none;
+        }
+        .case-band-icon {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 10px;
+            border-color: transparent transparent transparent currentColor;
+        }
+        /* Lightbox premier plan */
+        .case-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .case-lightbox[hidden] {
+            display: none;
+        }
+        .case-lightbox-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.82);
+            animation: caseFade 0.25s ease;
+        }
+        .case-lightbox-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.25rem;
+            z-index: 2;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2.4rem;
+            line-height: 1;
+            padding: 0.25rem 0.5rem;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        .case-lightbox-close:hover,
+        .case-lightbox-close:focus-visible {
+            opacity: 0.7;
+            outline: none;
+        }
+        .case-lightbox-inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .case-lightbox-video {
+            max-height: 80vh;
+            max-width: 100%;
+            border-radius: 8px;
+            background: #000;
+            display: block;
+        }
+        .case-lightbox-caption {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+        }
+        @keyframes caseFade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .case-lightbox-inner {
+            animation: casePop 0.28s ease;
+        }
+        @keyframes casePop {
+            from { opacity: 0; transform: scale(0.96); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .case-lightbox-backdrop,
+            .case-lightbox-inner {
+                animation: none;
+            }
+        }
+        
         /* Contact section title alignment */
         .contact .section-title {
             text-align: left !important;
@@ -275,7 +389,7 @@
             <div class="method-content">
                 <div class="method-grid">
                     {{ range .Params.method.pillars }}
-                    <div class="pillar-item">
+                    <div class="pillar-item{{ if eq .title "Modélisation stratégique" }} has-case{{ end }}">
                         <div class="pillar-content">
                             <h3><strong>{{ .title }}</strong></h3>
                             {{ if eq .title "Pluridisciplinarité" }}
@@ -294,6 +408,12 @@
                             <img src="/images/{{ .visual }}" alt="{{ .title }} - Différenciation Sterna Conseil" />
                         </div>
                     </div>
+                    {{- if eq .title "Modélisation stratégique" }}
+                    <button type="button" class="case-band" data-case-open aria-haspopup="dialog">
+                        <span class="case-band-icon" aria-hidden="true"></span>
+                        Voir un cas client
+                    </button>
+                    {{- end }}
                     {{ end }}
                 </div>
             </div>
@@ -410,6 +530,19 @@
         </div>
     </section>
 
+    <!-- Lightbox cas client -->
+    <div class="case-lightbox" id="case-lightbox" hidden>
+        <div class="case-lightbox-backdrop" data-case-close></div>
+        <button type="button" class="case-lightbox-close" data-case-close aria-label="Fermer la vidéo">&times;</button>
+        <div class="case-lightbox-inner" role="dialog" aria-modal="true" aria-label="Cas client">
+            <video class="case-lightbox-video" controls playsinline preload="none">
+                <source src="/videos/cas-client.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la lecture vidéo.
+            </video>
+            <p class="case-lightbox-caption">Cas client réel, anonymisé.</p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -462,6 +595,33 @@
                         hamburger.classList.remove('open');
                         mobileNavOverlay.classList.remove('active');
                     }
+                });
+            }
+
+            // Cas client : ouverture en lightbox (premier plan)
+            const caseLightbox = document.getElementById('case-lightbox');
+            if (caseLightbox) {
+                const caseVideo = caseLightbox.querySelector('video');
+                const caseClose = caseLightbox.querySelector('.case-lightbox-close');
+                let caseTrigger = null;
+                const openCase = (e) => {
+                    caseTrigger = e.currentTarget;
+                    caseLightbox.hidden = false;
+                    document.body.style.overflow = 'hidden';
+                    if (caseClose) caseClose.focus();
+                    caseVideo.play();
+                };
+                const closeCase = () => {
+                    caseVideo.pause();
+                    caseVideo.currentTime = 0;
+                    caseLightbox.hidden = true;
+                    document.body.style.overflow = '';
+                    if (caseTrigger) caseTrigger.focus();
+                };
+                document.querySelectorAll('[data-case-open]').forEach(btn => btn.addEventListener('click', openCase));
+                caseLightbox.querySelectorAll('[data-case-close]').forEach(el => el.addEventListener('click', closeCase));
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && !caseLightbox.hidden) closeCase();
                 });
             }
 

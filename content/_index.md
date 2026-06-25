@@ -80,21 +80,13 @@ Cette intégration produit une <strong>cohérence</strong> que les interventions
 
       visual: "visuel6.png"
     - title: "Modélisation stratégique"
-      description: "Nous utilisons la modélisation comme outil de <strong>définition stratégique et de communication</strong>.<br>
-
-Nos modèles dynamiques structurent votre réflexion et deviennent vos <strong>supports de conviction</strong> auprès des investisseurs professionnels."
+      description: "Nous utilisons la modélisation comme outil de <strong>définition stratégique et de communication</strong>.\nNos modèles dynamiques structurent votre réflexion et deviennent vos <strong>supports de conviction</strong> auprès des investisseurs professionnels."
       visual: "visuel7.png"
     - title: "Expérience engagée"
-      description: "Nous mobilisons exclusivement des <strong>profils seniors</strong>, habitués aux enjeux de direction générale.<br>
-
-Ces experts réalisent personnellement les missions - sans délégation - et demeurent <strong>impliqués tout au long de la mission</strong>."
+      description: "Nous mobilisons exclusivement des <strong>profils seniors</strong>, habitués aux enjeux de direction générale.\nCes experts réalisent personnellement les missions - sans délégation - et demeurent <strong>impliqués tout au long de la mission</strong>."
       visual: "visuel8.png"
     - title: "Durabilité"
-      description: "Nous construisons pour le deal <strong>ET</strong> pour l'après-deal.<br>
-
-Nous accordons une place essentielle à l'<strong>intégration des acquisitions</strong> et vous aidons à l'anticiper.<br>
-
-Nous vous transmettons des <strong>outils ouverts et à votre marque</strong> (modèles et supports) qui garantissent votre <strong>autonomie</strong> opérationnelle."
+      description: "Nous construisons pour le deal <strong>ET</strong> pour l'après-deal.\nNous accordons une place essentielle à l'<strong>intégration des acquisitions</strong> et vous aidons à l'anticiper.\nNous vous transmettons des <strong>outils ouverts et à votre marque</strong> (modèles et supports) qui garantissent votre <strong>autonomie</strong> opérationnelle."
       visual: "visuel12.png"
 
 clients:
