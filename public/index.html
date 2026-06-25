@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR" data-theme="light">
 <head>
-	<meta name="generator" content="Hugo 0.163.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.163.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60293&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sterna Conseil</title>
@@ -132,30 +132,79 @@
         .case-band {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
+            gap: 1.1rem;
             width: 100%;
             margin: 0 0 3rem 0;
-            padding: 1rem 1.5rem;
+            padding: 0.9rem 1.2rem;
             border: 1.5px solid var(--accent);
             border-radius: 0 0 8px 8px;
-            background: rgba(0, 0, 255, 0.06);
-            color: var(--accent);
+            background: rgba(0, 0, 255, 0.04);
             font-family: inherit;
-            font-size: 1.05rem;
-            font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.25s ease, color 0.25s ease;
+            text-align: left;
+            transition: background-color 0.25s ease;
         }
         .case-band:hover,
         .case-band:focus-visible {
-            background: rgba(0, 0, 255, 0.14);
-            color: var(--accent);
+            background: rgba(0, 0, 255, 0.10);
             outline: none;
         }
-        .case-band-icon {
+        .case-band-thumb {
+            position: relative;
             flex-shrink: 0;
+            width: 220px;
+            height: 112px;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 255, 0.2);
+        }
+        .case-band-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
+        }
+        .case-band-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+            transition: transform 0.2s ease;
+        }
+        .case-band:hover .case-band-play {
+            transform: translate(-50%, -50%) scale(1.08);
+        }
+        .case-band-play svg {
+            margin-left: 2px;
+        }
+        .case-band-title {
+            display: block;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+        .case-band-sub {
+            display: block;
+            margin-top: 0.2rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .case-band-thumb {
+                width: 150px;
+                height: 80px;
+            }
+            .case-band-title { font-size: 0.98rem; }
+            .case-band-sub { font-size: 0.82rem; }
         }
          
         .case-lightbox {
@@ -454,8 +503,14 @@ Nos modèles dynamiques structurent votre réflexion et deviennent vos <strong>s
                         </div>
                     </div>
                     <button type="button" class="case-band" data-case-open aria-haspopup="dialog">
-                        <svg class="case-band-icon" width="11" height="13" viewBox="0 0 11 13" aria-hidden="true"><path d="M0 0 L11 6.5 L0 13 Z" fill="currentColor"/></svg>
-                        Voir un cas client
+                        <span class="case-band-thumb">
+                            <img src="/images/cas-client-cloche.png" alt="" />
+                            <span class="case-band-play" aria-hidden="true"><svg width="13" height="16" viewBox="0 0 13 16"><path d="M0 0 L13 8 L0 16 Z" fill="#0000FF"/></svg></span>
+                        </span>
+                        <span class="case-band-label">
+                            <span class="case-band-title">Voir un cas client</span>
+                            <span class="case-band-sub">Société d'ingénierie · 15 M€ de CA réalisé sur projets · un budget à présenter au board</span>
+                        </span>
                     </button>
                     
                     <div class="pillar-item">
