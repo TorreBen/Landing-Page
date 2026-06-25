@@ -153,11 +153,8 @@
             outline: none;
         }
         .case-band-icon {
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 6px 0 6px 10px;
-            border-color: transparent transparent transparent currentColor;
+            flex-shrink: 0;
+            display: block;
         }
         /* Lightbox premier plan */
         .case-lightbox {
@@ -410,7 +407,7 @@
                     </div>
                     {{- if eq .title "Modélisation stratégique" }}
                     <button type="button" class="case-band" data-case-open aria-haspopup="dialog">
-                        <span class="case-band-icon" aria-hidden="true"></span>
+                        <svg class="case-band-icon" width="11" height="13" viewBox="0 0 11 13" aria-hidden="true"><path d="M0 0 L11 6.5 L0 13 Z" fill="currentColor"/></svg>
                         Voir un cas client
                     </button>
                     {{- end }}
